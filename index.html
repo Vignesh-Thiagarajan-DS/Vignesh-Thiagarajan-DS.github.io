@@ -4,47 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vignesh Thiagarajan - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="script.js"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: 'Inter', sans-serif;
             transition: background 0.3s, color 0.3s;
         }
-        header {
-            text-align: center;
-            padding: 20px;
-            background: #333;
+        .dark-mode {
+            background: #1a202c;
             color: white;
-        }
-        .toggle-container {
-            text-align: right;
-            padding: 10px;
-        }
-        #about, #skills, #projects, #blog, #chatbot, footer {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
         }
         .project img {
-            width: 100%;
             border-radius: 10px;
         }
-        #chat-container {
-            border: 1px solid #ccc;
-            padding: 10px;
-            min-height: 100px;
-            text-align: center;
-        }
-        footer {
-            text-align: center;
-            background: #333;
-            color: white;
-            padding: 10px;
-        }
     </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-gray-900 text-white p-6 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Vignesh Thiagarajan</h1>
+        <label class="flex items-center space-x-2">
+            <span>Dark Mode</span>
+            <input type="checkbox" id="theme-toggle" class="toggle-checkbox">
+        </label>
+    </header>
+    
+    <section class="text-center py-12">
+        <img src="Vignesh_DP.jpg" alt="Vignesh Thiagarajan" class="w-32 h-32 mx-auto rounded-full shadow-lg">
+        <p class="max-w-xl mx-auto mt-4 text-lg">Lead Data Scientist with 5+ years of experience in Search Advertising, Retail, Automotive & CPG industries. Currently setting up a data science wing for a $500K engagement.</p>
+    </section>
+    
+    <section class="py-12 bg-white">
+        <h2 class="text-center text-2xl font-semibold">Skills</h2>
+        <div class="flex flex-wrap justify-center space-x-4 mt-6">
+            <span class="bg-gray-200 px-4 py-2 rounded-lg">Machine Learning</span>
+            <span class="bg-gray-200 px-4 py-2 rounded-lg">Deep Learning</span>
+            <span class="bg-gray-200 px-4 py-2 rounded-lg">Python, R, SQL</span>
+            <span class="bg-gray-200 px-4 py-2 rounded-lg">AWS, GCP</span>
+        </div>
+    </section>
+    
+    <section class="py-12">
+        <h2 class="text-center text-2xl font-semibold">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-6">
+            <div class="p-4 bg-white shadow-lg rounded-lg">
+                <img src="project1.jpg" alt="Geospatial Clustering" class="w-full rounded-lg">
+                <h3 class="text-lg font-bold mt-4">Geospatial Clustering for Warehouse Placement</h3>
+                <p>Market penetration analysis identified retailers worth $8M, optimizing warehouse locations.</p>
+            </div>
+            <div class="p-4 bg-white shadow-lg rounded-lg">
+                <img src="project2.jpg" alt="New Product Launch" class="w-full rounded-lg">
+                <h3 class="text-lg font-bold mt-4">New Product Launch Analytics</h3>
+                <p>Developed demand forecasting models with 86% accuracy, aiding product launches.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-12 bg-white">
+        <h2 class="text-center text-2xl font-semibold">Blog</h2>
+        <div class="max-w-3xl mx-auto mt-6 space-y-6">
+            <article class="p-4 bg-gray-100 shadow-lg rounded-lg">
+                <h3 class="text-lg font-bold">Understanding Large Language Models</h3>
+                <p>Explore how LLMs work, their applications, and future potential in AI.</p>
+            </article>
+            <article class="p-4 bg-gray-100 shadow-lg rounded-lg">
+                <h3 class="text-lg font-bold">Deep Learning in Image Recognition</h3>
+                <p>A deep dive into CNNs and their role in computer vision tasks.</p>
+            </article>
+        </div>
+    </section>
+    
+    <section class="py-12">
+        <h2 class="text-center text-2xl font-semibold">Chat with Me</h2>
+        <div class="max-w-md mx-auto p-4 bg-gray-100 shadow-lg rounded-lg text-center">
+            <p>Chatbot UI coming soon!</p>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-900 text-white text-center p-4">
+        <p>Contact: <a href="mailto:vigneshucd@gmail.com" class="underline">vigneshucd@gmail.com</a></p>
+        <p><a href="https://linkedin.com/in/vignesh-thiagarajan-ds/" class="underline">LinkedIn</a> | <a href="https://github.com/Vignesh-Thiagarajan-DS" class="underline">GitHub</a></p>
+    </footer>
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const themeToggle = document.getElementById('theme-toggle');
@@ -53,68 +94,5 @@
             });
         });
     </script>
-</head>
-<body>
-    <header>
-        <div class="toggle-container">
-            <input type="checkbox" id="theme-toggle">
-            <label for="theme-toggle">Dark Mode</label>
-        </div>
-        <h1>Vignesh Thiagarajan</h1>
-        <h2>Lead Data Scientist</h2>
-    </header>
-    
-    <section id="about">
-        <img src="Vignesh_DP.jpg" alt="Vignesh Thiagarajan" style="width:150px; border-radius:50%;">
-        <p>Lead Data Scientist with 5+ years of experience in Search Advertising, Retail, Automotive & CPG industries. Currently setting up a data science wing for a $500K engagement. Adept in problem-solving using simplistic approaches and building analytical solutions.</p>
-    </section>
-    
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Machine Learning, Deep Learning, NLP, LLMs</li>
-            <li>Python, R, SQL, HiveQL, DAX</li>
-            <li>TensorFlow, PyTorch, Scikit-learn</li>
-            <li>Power BI, AWS, GCP, GitHub</li>
-        </ul>
-    </section>
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <img src="project1.jpg" alt="Geospatial Clustering">
-            <h3>Geospatial Clustering for Warehouse Placement</h3>
-            <p>Market penetration analysis identified retailers worth $8M, optimizing warehouse locations.</p>
-        </div>
-        <div class="project">
-            <img src="project2.jpg" alt="New Product Launch">
-            <h3>New Product Launch Analytics</h3>
-            <p>Developed demand forecasting models with 86% accuracy, aiding product launches.</p>
-        </div>
-    </section>
-    
-    <section id="blog">
-        <h2>Blog</h2>
-        <article>
-            <h3>Understanding Large Language Models</h3>
-            <p>Explore how LLMs work, their applications, and future potential in AI.</p>
-        </article>
-        <article>
-            <h3>Deep Learning in Image Recognition</h3>
-            <p>A deep dive into CNNs and their role in computer vision tasks.</p>
-        </article>
-    </section>
-    
-    <section id="chatbot">
-        <h2>Chat with Me</h2>
-        <div id="chat-container">
-            <p>Chatbot UI coming soon!</p>
-        </div>
-    </section>
-    
-    <footer>
-        <p>Contact: <a href="mailto:vigneshucd@gmail.com">vigneshucd@gmail.com</a></p>
-        <p><a href="https://linkedin.com/in/vignesh-thiagarajan-ds/">LinkedIn</a> | <a href="https://github.com/Vignesh-Thiagarajan-DS">GitHub</a></p>
-    </footer>
 </body>
 </html>
