@@ -6,11 +6,28 @@
     <title>Vignesh Thiagarajan - Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
+        }
+        .navbar {
+            background: #0073e6;
+            padding: 15px;
             text-align: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+        }
+        .hero {
+            background: #004a99;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
         }
         .container {
             max-width: 900px;
@@ -22,80 +39,90 @@
             margin-top: 20px;
         }
         h1, h2 {
-            color: #333;
-        }
-        .links a {
-            display: block;
-            margin: 10px;
             color: #0073e6;
-            text-decoration: none;
-            font-size: 18px;
         }
         .section {
             text-align: left;
             margin-top: 20px;
         }
-        .section ul {
-            list-style-type: none;
-            padding: 0;
+        .card {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
         }
-        .section li {
-            margin: 5px 0;
+        .links a {
+            display: inline-block;
+            margin: 10px;
+            color: #0073e6;
+            text-decoration: none;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="navbar">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="hero">
         <h1>Vignesh Thiagarajan</h1>
         <p>Data Scientist | ML Enthusiast | Business Consultant</p>
-        
-        <div class="links">
-            <a href="mailto:vigneshucd@gmail.com">Email: vigneshucd@gmail.com</a>
-            <a href="https://www.linkedin.com/in/vignesh-thiagarajan-ds" target="_blank">LinkedIn</a>
-            <a href="https://github.com/Vignesh-Thiagarajan-DS" target="_blank">GitHub</a>
-            <a href="resume.pdf" target="_blank">View Resume</a>
-        </div>
-        
-        <div class="section">
+    </div>
+    
+    <div class="container">
+        <div id="about" class="section">
             <h2>About Me</h2>
             <p>Lead Data Scientist with 5+ years of experience in Retail, Search Advertising, Automotive & CPG industries. Passionate about building analytical solutions and deriving actionable insights.</p>
         </div>
         
-        <div class="section">
+        <div id="skills" class="section">
             <h2>Skills</h2>
-            <ul>
-                <li>Machine Learning, NLP, Deep Learning, Generative AI</li>
-                <li>Python, SQL, R, Hive QL, DAX</li>
-                <li>Power BI, GCP, AWS, BigQuery, DBT</li>
-            </ul>
+            <div class="card">Machine Learning, NLP, Deep Learning, Generative AI</div>
+            <div class="card">Python, SQL, R, Hive QL, DAX</div>
+            <div class="card">Power BI, GCP, AWS, BigQuery, DBT</div>
         </div>
         
-        <div class="section">
+        <div id="experience" class="section">
             <h2>Experience</h2>
-            <p><strong>Lead Data Scientist, ShopUp (2022-2024)</strong></p>
-            <ul>
-                <li>Optimized warehouse placement with geospatial clustering, increasing revenue.</li>
-                <li>Developed demand forecasting models with 86% accuracy.</li>
-            </ul>
-            <p><strong>Mu Sigma (2018-2022)</strong></p>
-            <ul>
-                <li>Built predictive models for new product launches.</li>
-                <li>Developed automated keyword bidding strategies.</li>
-            </ul>
+            <div class="card">
+                <p><strong>Lead Data Scientist, ShopUp (2022-2024)</strong></p>
+                <ul>
+                    <li>Optimized warehouse placement with geospatial clustering, increasing revenue.</li>
+                    <li>Developed demand forecasting models with 86% accuracy.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <p><strong>Mu Sigma (2018-2022)</strong></p>
+                <ul>
+                    <li>Built predictive models for new product launches.</li>
+                    <li>Developed automated keyword bidding strategies.</li>
+                </ul>
+            </div>
         </div>
         
-        <div class="section">
-            <h2>Education</h2>
-            <p>MS in Business Analytics, UC Davis (2024-Present)</p>
-            <p>B.Tech in Computer Science, Amrita School of Engineering (2014-2018)</p>
-        </div>
-        
-        <div class="section">
+        <div id="projects" class="section">
             <h2>Projects</h2>
-            <ul>
-                <li><a href="https://github.com/Vignesh-Thiagarajan-DS/project1" target="_blank">Project 1</a></li>
-                <li><a href="https://github.com/Vignesh-Thiagarajan-DS/project2" target="_blank">Project 2</a></li>
-            </ul>
+            <div class="card">
+                <a href="https://github.com/Vignesh-Thiagarajan-DS/project1" target="_blank">Project 1</a>
+            </div>
+            <div class="card">
+                <a href="https://github.com/Vignesh-Thiagarajan-DS/project2" target="_blank">Project 2</a>
+            </div>
+        </div>
+        
+        <div id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="links">
+                <a href="mailto:vigneshucd@gmail.com">Email: vigneshucd@gmail.com</a>
+                <a href="https://www.linkedin.com/in/vignesh-thiagarajan-ds" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Vignesh-Thiagarajan-DS" target="_blank">GitHub</a>
+                <a href="resume.pdf" target="_blank">View Resume</a>
+            </div>
         </div>
     </div>
 </body>
