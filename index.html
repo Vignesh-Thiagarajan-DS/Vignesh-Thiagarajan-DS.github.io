@@ -4,141 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vignesh Thiagarajan - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #004a99, #0073e6);
-            color: #333;
+            transition: background 0.3s, color 0.3s;
         }
-        .navbar {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 15px;
+        header {
             text-align: center;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            margin: 0 15px;
-            transition: 0.3s;
-        }
-        .navbar a:hover {
-            color: #ffcc00;
-        }
-        .hero {
-            text-align: center;
-            padding: 50px 20px;
-            color: white;
-        }
-        .hero img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
             padding: 20px;
-            background: white;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            background: #333;
+            color: white;
+        }
+        .toggle-container {
+            text-align: right;
+            padding: 10px;
+        }
+        #about, #skills, #projects, #blog, #chatbot, footer {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .project img {
+            width: 100%;
             border-radius: 10px;
-            margin-top: 20px;
-            animation: fadeIn 1.5s;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        #chat-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 100px;
+            text-align: center;
         }
-        h1, h2 {
-            color: #0073e6;
-        }
-        .section {
-            text-align: left;
-            margin-top: 20px;
-        }
-        .card {
-            background: #f9f9f9;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-        }
-        .links a {
-            display: inline-block;
-            margin: 10px;
-            color: #0073e6;
-            text-decoration: none;
-            font-size: 18px;
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 10px;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('change', () => {
+                document.body.classList.toggle('dark-mode');
+            });
+        });
+    </script>
 </head>
 <body>
-    <div class="navbar">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
-    <div class="hero">
-        <img src="your-photo.jpg" alt="Vignesh Thiagarajan">
+    <header>
+        <div class="toggle-container">
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle">Dark Mode</label>
+        </div>
         <h1>Vignesh Thiagarajan</h1>
-        <p>Data Scientist | ML Enthusiast | Business Consultant</p>
-    </div>
+        <h2>Lead Data Scientist</h2>
+    </header>
     
-    <div class="container">
-        <div id="about" class="section">
-            <h2>About Me</h2>
-            <p>Lead Data Scientist with 5+ years of experience in Retail, Search Advertising, Automotive & CPG industries. Passionate about building analytical solutions and deriving actionable insights.</p>
+    <section id="about">
+        <img src="Vignesh_DP.jpg" alt="Vignesh Thiagarajan" style="width:150px; border-radius:50%;">
+        <p>Lead Data Scientist with 5+ years of experience in Search Advertising, Retail, Automotive & CPG industries. Currently setting up a data science wing for a $500K engagement. Adept in problem-solving using simplistic approaches and building analytical solutions.</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Machine Learning, Deep Learning, NLP, LLMs</li>
+            <li>Python, R, SQL, HiveQL, DAX</li>
+            <li>TensorFlow, PyTorch, Scikit-learn</li>
+            <li>Power BI, AWS, GCP, GitHub</li>
+        </ul>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="project1.jpg" alt="Geospatial Clustering">
+            <h3>Geospatial Clustering for Warehouse Placement</h3>
+            <p>Market penetration analysis identified retailers worth $8M, optimizing warehouse locations.</p>
         </div>
-        
-        <div id="skills" class="section">
-            <h2>Skills</h2>
-            <div class="card">Machine Learning, NLP, Deep Learning, Generative AI</div>
-            <div class="card">Python, SQL, R, Hive QL, DAX</div>
-            <div class="card">Power BI, GCP, AWS, BigQuery, DBT</div>
+        <div class="project">
+            <img src="project2.jpg" alt="New Product Launch">
+            <h3>New Product Launch Analytics</h3>
+            <p>Developed demand forecasting models with 86% accuracy, aiding product launches.</p>
         </div>
-        
-        <div id="experience" class="section">
-            <h2>Experience</h2>
-            <div class="card">
-                <p><strong>Lead Data Scientist, ShopUp (2022-2024)</strong></p>
-                <ul>
-                    <li>Optimized warehouse placement with geospatial clustering, increasing revenue.</li>
-                    <li>Developed demand forecasting models with 86% accuracy.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <p><strong>Mu Sigma (2018-2022)</strong></p>
-                <ul>
-                    <li>Built predictive models for new product launches.</li>
-                    <li>Developed automated keyword bidding strategies.</li>
-                </ul>
-            </div>
+    </section>
+    
+    <section id="blog">
+        <h2>Blog</h2>
+        <article>
+            <h3>Understanding Large Language Models</h3>
+            <p>Explore how LLMs work, their applications, and future potential in AI.</p>
+        </article>
+        <article>
+            <h3>Deep Learning in Image Recognition</h3>
+            <p>A deep dive into CNNs and their role in computer vision tasks.</p>
+        </article>
+    </section>
+    
+    <section id="chatbot">
+        <h2>Chat with Me</h2>
+        <div id="chat-container">
+            <p>Chatbot UI coming soon!</p>
         </div>
-        
-        <div id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="card">
-                <a href="https://github.com/Vignesh-Thiagarajan-DS/project1" target="_blank">Project 1</a>
-            </div>
-            <div class="card">
-                <a href="https://github.com/Vignesh-Thiagarajan-DS/project2" target="_blank">Project 2</a>
-            </div>
-        </div>
-        
-        <div id="contact" class="section">
-            <h2>Contact</h2>
-            <div class="links">
-                <a href="mailto:vigneshucd@gmail.com">Email: vigneshucd@gmail.com</a>
-                <a href="https://www.linkedin.com/in/vignesh-thiagarajan-ds" target="_blank">LinkedIn</a>
-                <a href="https://github.com/Vignesh-Thiagarajan-DS" target="_blank">GitHub</a>
-                <a href="resume.pdf" target="_blank">View Resume</a>
-            </div>
-        </div>
-    </div>
+    </section>
+    
+    <footer>
+        <p>Contact: <a href="mailto:vigneshucd@gmail.com">vigneshucd@gmail.com</a></p>
+        <p><a href="https://linkedin.com/in/vignesh-thiagarajan-ds/">LinkedIn</a> | <a href="https://github.com/Vignesh-Thiagarajan-DS">GitHub</a></p>
+    </footer>
 </body>
 </html>
